@@ -7,4 +7,5 @@ import java.util.List;
 
 public interface UserService extends IService<UserEntity> {
     List<UserEntity> getAllUser();
+    List<UserEntity> getUserById(String id);
 }

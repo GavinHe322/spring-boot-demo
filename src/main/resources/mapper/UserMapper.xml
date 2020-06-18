@@ -4,6 +4,9 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.demo.mybatis.dao.UserDao">
     <select id="getAllUser" resultType="com.demo.mybatis.entity.UserEntity">
-        select * from user;
+        select * from user
+    </select>
+    <select id="getUserById" resultType="com.demo.mybatis.entity.UserEntity">
+        SELECT * FROM user WHERE  id = #{id}
     </select>
 </mapper>

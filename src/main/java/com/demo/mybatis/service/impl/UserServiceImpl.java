@@ -5,6 +5,7 @@ import com.baomidou.mybatisplus.service.impl.ServiceImpl;
 import com.demo.mybatis.dao.UserDao;
 import com.demo.mybatis.entity.UserEntity;
 import com.demo.mybatis.service.UserService;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -17,4 +18,8 @@ public class UserServiceImpl extends ServiceImpl<UserDao, UserEntity> implements
         return baseMapper.getAllUser();
     };
 
+    @Override
+    public List<UserEntity> getUserById(String id) {
+        return baseMapper.getUserById(id);
+    }
 }
